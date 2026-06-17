@@ -112,7 +112,7 @@ VITE_API_URL=http://localhost:8001
 ### 1. Clone Repository
 
 ```bash id="clone"
-git clone https://github.com/your-username/shortify.git
+git clone https://github.com/Abhishek-mehata/shortify.git
 cd shortify
 ```
 

@@ -1,0 +1,172 @@
+/* index.css */
+
+@import "tailwindcss";
+
+:root {
+/* Backgrounds */
+--bg: #18181b;               /* Main background */
+--surface: #202127;         /* Cards / navbar / footer */
+--surface-hover: #2a2b33;   /* Hover states */
+
+/* Text */
+--text: #b7bcc8;            /* Primary text */
+--text-muted: #8b90a0;      /* Secondary text */
+--text-heading: #f3f4f6;    /* Headings */
+
+/* Accent */
+--accent: #9f7aea;          /* Soft lavender */
+--accent-hover: #8b5cf6;
+--accent-bg: rgba(159, 122, 234, 0.12);
+
+/* Borders */
+--border: #30323b;
+--border-light: #3b3d47;
+
+/* Status Colors */
+--success: #34d399;
+--warning: #fbbf24;
+--danger: #f87171;
+
+/* Effects */
+--shadow:
+rgba(0, 0, 0, 0.22) 0 10px 15px -3px,
+rgba(0, 0, 0, 0.16) 0 4px 6px -2px;
+
+/* Typography */
+--sans:
+Inter,
+system-ui,
+-apple-system,
+BlinkMacSystemFont,
+"Segoe UI",
+sans-serif;
+
+--mono:
+"JetBrains Mono",
+ui-monospace,
+monospace;
+
+color-scheme: dark;
+
+font-family: var(--sans);
+line-height: 1.6;
+font-weight: 400;
+
+color: var(--text);
+background-color: var(--bg);
+
+font-synthesis: none;
+text-rendering: optimizeLegibility;
+
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+
+/* Reset */
+
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+min-height: 100vh;
+}
+
+body {
+margin: 0;
+background: var(--bg);
+color: var(--text);
+}
+
+/* Typography */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+color: var(--text-heading);
+font-weight: 600;
+margin: 0;
+}
+
+p {
+margin: 0;
+}
+
+a {
+color: inherit;
+text-decoration: none;
+}
+
+/* Inputs */
+
+input,
+textarea,
+select {
+width: 100%;
+border: 1px solid var(--border);
+background: var(--surface);
+color: var(--text);
+padding: 0.875rem 1rem;
+border-radius: 0.875rem;
+outline: none;
+transition: all 0.2s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+color: var(--text-muted);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+border-color: var(--accent);
+box-shadow: 0 0 0 4px var(--accent-bg);
+}
+
+/* Buttons */
+
+button {
+font: inherit;
+cursor: pointer;
+border: none;
+transition: all 0.2s ease;
+}
+
+button:disabled {
+opacity: 0.6;
+cursor: not-allowed;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+width: 8px;
+}
+
+::-webkit-scrollbar-track {
+background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+background: var(--border-light);
+border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: var(--accent);
+}
+
+/* Selection */
+
+::selection {
+background: var(--accent-bg);
+color: var(--text-heading);
+}
